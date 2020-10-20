@@ -5,19 +5,24 @@
           </div>
         
         
-          <a href ="#" class="btn btn-primary mb-3">Tambah Paket</a>
+          <a href ="<?php echo base_url('admin/paket_cukur/tambah_paket')   ?>" class="btn btn-primary mb-3">Tambah Paket</a>
+          
+          <?php echo $this->session->flashdata('pesan') ?>
           <table class="table table-hover table-striped table-bordered">
             <thead>
+            <tr>
                 <th>No</th>
                 <th>Nama Paket</th>
                 <th>Detail Paket</th>
                 <th>Harga Paket</th>
                 <th>Aksi</th>
+            </tr>
             </thead>
             <tbody>
                 <?php
                 $no=1;
                 foreach($paket as $pk) :  ?>
+                <tr>
                     <td><?php echo $no++ ?></td>
                     <td><?php echo $pk->nama_paket ?></td>
                     <td><?php echo $pk->detail_paket ?></td>
@@ -32,6 +37,7 @@
                     
 
                     </td>
+                </tr>
                 <?php endforeach; ?>
             
             </tbody>
