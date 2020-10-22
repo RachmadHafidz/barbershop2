@@ -40,7 +40,7 @@
   </nav>
 
   <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -70,6 +70,27 @@
       </a>
     </div>
   </header>
+
+<div class="container">
+<div class="row mt-4">
+<?php foreach($paket as $pk) : ?>
+
+  <div class="col-lg-4 col-md-6 mb-4 mt-120px">
+  <div class="card-h100 ">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $pk->nama_paket ?></h5>
+      <p class="card-text"><?php echo $pk->harga ?></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<?php endforeach; ?>
+</div>
+</div>
+<div class="card-footer">
+</div>
 
   <!-- Page Content -->
   <div class="container">
