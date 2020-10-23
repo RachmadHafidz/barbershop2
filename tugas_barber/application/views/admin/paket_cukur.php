@@ -28,13 +28,9 @@
                     <td><?php echo $pk->detail_paket ?></td>
                     <td><?php echo $pk->harga ?></td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-success"><i class=" fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
-                        <a href="#" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
-
-
-
-                    
+                        <a href="<?php echo base_url('admin/paket_cukur/detail_paket/').$pk->id_paket ?>" class="btn btn-sm btn-success"><i class=" fas fa-eye"></i></a>
+                        <a href="<?php echo base_url('admin/paket_cukur/delete_paket/').$pk->id_paket ?>" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
+                        <a href="<?php echo base_url('admin/paket_cukur/update_paket/').$pk->id_paket ?>" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
 
                     </td>
                 </tr>

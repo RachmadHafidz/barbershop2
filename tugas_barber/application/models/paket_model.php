@@ -12,6 +12,11 @@ class Paket_model extends CI_model
     $this->db->insert($table,$data);
     }
 
+    public function update_paket($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where );
+    }
+
 }
 
 ?>
