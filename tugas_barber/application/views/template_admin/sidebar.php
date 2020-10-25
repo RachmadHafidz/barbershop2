@@ -240,7 +240,13 @@
               <a class="nav-link" href="<?php echo base_url('admin/data_barbershop') ?>"><i class="fas fa-pencil-ruler"></i> <span>Data Barbershop</span></a>
               </li>
               <li>
-              <a class="nav-link" href="<?php echo base_url('admin/paket_cukur') ?>"><i class="fas fa-pencil-ruler"></i> <span>Paket Cukur</span></a>
+              <a class="nav-link" href="<?php echo base_url('admin/paket_cukur') ?>"><i class="fas fa-cut"></i> <span>Paket Cukur</span></a>
+              </li>
+              <li>
+              <a class="nav-link" href="<?php echo base_url('admin/data_customer') ?>"><i class="fas fa-id-card"></i> <span>Data Customer</span></a>
+              </li>
+              <li>
+              <a class="nav-link" href="<?php echo base_url('admin/data_transaksi') ?>"><i class="fas fa-database"></i> <span>Data Transaksi</span></a>
               </li>
             </ul>
 

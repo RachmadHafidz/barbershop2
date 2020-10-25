@@ -60,6 +60,7 @@ class Paket_cukur extends CI_Controller
         $this->form_validation->set_rules('harga','Harga','required');
     }
 
+//update paket 
     public function update_paket($id)
     {
         $where = array('id_paket' => $id);
