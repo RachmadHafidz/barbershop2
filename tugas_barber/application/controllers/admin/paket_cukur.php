@@ -43,7 +43,7 @@ class Paket_cukur extends CI_Controller
 
         $this->paket_model->insert_data($data,'paket_cukur');
         $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        Data Berhasil Ditambahkan!.
+                        Data Berhasil Ditambahkan!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -105,6 +105,28 @@ class Paket_cukur extends CI_Controller
     
         }
         
+    }
+
+    public function detail_paket($id)
+    {
+        $data['detail'] = $this->paket_model->ambil_id_paket($id);
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/detail_paket',$data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function delete_paket($id)
+    {
+        $where = array('id_paket' => $id);
+        $this->paket_model->delete_data($where, 'paket_cukur' );
+        $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Data Berhasil Dihapus!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>');
+        redirect('admin/paket_cukur');
     }
 }
 

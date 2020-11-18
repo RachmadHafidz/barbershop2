@@ -77,9 +77,14 @@
 
   <div class="col-lg-4 col-md-6 mb-4 mt-120px">
   <div class="card-h100 ">
-    <div class="card-body">
+   <div class="card-body" >
       <h5 class="card-title"><?php echo $pk->nama_paket ?></h5>
-      <p class="card-text"><?php echo $pk->harga ?></p>
+      <span class="fa-stack fa-3x">
+      <i class="fas fa-circle fa-stack-2x text-primary"></i>
+      <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+    </span>
+      <p class="text-muted"><?php echo $pk->harga ?></p>
+      <p class="text-muted"><?php echo $pk->detail_paket ?></p>
     </div>
     <div class="card-footer">
       <small class="text-muted">Last updated 3 mins ago</small>
@@ -96,7 +101,6 @@
   <div class="container">
 
     <h1 class="my-4">Welcome to Modern Business</h1>
-
   <!-- Features Section -->
     <div class="row">
       <div class="col-lg-6">

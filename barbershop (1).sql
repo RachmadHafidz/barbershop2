@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Okt 2020 pada 15.05
+-- Waktu pembuatan: 18 Nov 2020 pada 16.10
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.16
 
@@ -37,6 +37,29 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `customer`
+--
+
+CREATE TABLE `customer` (
+  `id_customer` int(11) NOT NULL,
+  `nama` varchar(120) NOT NULL,
+  `username` varchar(120) NOT NULL,
+  `password` varchar(120) NOT NULL,
+  `alamat` varchar(120) NOT NULL,
+  `no_telepon` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `customer`
+--
+
+INSERT INTO `customer` (`id_customer`, `nama`, `username`, `password`, `alamat`, `no_telepon`) VALUES
+(1, 'ipang', 'ifar', '123', 'mojokerto', '049430292'),
+(2, 'kapten imut', 'e411812115', '333', 'mojokerto', '1234567');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `paket_cukur`
 --
 
@@ -52,7 +75,8 @@ CREATE TABLE `paket_cukur` (
 --
 
 INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`) VALUES
-(1, 'PAKET HEMAT', 'CUKUR RAMBUT', '50.000');
+(5, 'Paket Super Hemat', 'cukur + keramasssssssssssssssss', '200.00000000000'),
+(7, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000');
 
 --
 -- Indexes for dumped tables
@@ -63,6 +87,12 @@ INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`) VA
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indeks untuk tabel `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id_customer`);
 
 --
 -- Indeks untuk tabel `paket_cukur`
@@ -81,10 +111,16 @@ ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `paket_cukur`
 --
 ALTER TABLE `paket_cukur`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

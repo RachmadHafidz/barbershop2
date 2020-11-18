@@ -17,6 +17,22 @@ class Paket_model extends CI_model
         $this->db->update($table, $data, $where );
     }
 
+    public function delete_data($where,$table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
+
+    public function ambil_id_paket($id)
+    {
+        $hasil = $this->db->where('id_paket', $id)->get('paket_cukur');
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        }else{
+            return false;
+        }
+    }
+
 }
 
 ?>
