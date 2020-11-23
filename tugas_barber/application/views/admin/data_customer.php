@@ -31,8 +31,8 @@
                     <td><?php echo $cs->alamat ?></td>
                     <td><?php echo $cs->no_telepon ?></td>
                     <td>
-                        <a href="<?php echo base_url('admin/data_customer/delete_paket/').$cs->id_customer ?>" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
-                        <a href="<?php echo base_url('admin/data_customer/update_paket/').$cs->id_customer ?>" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
+                        <a href="<?php echo base_url('admin/data_customer/delete_customer/').$cs->id_customer ?>" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
+                        <a href="<?php echo base_url('admin/data_customer/update_customer/').$cs->id_customer ?>" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

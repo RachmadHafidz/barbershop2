@@ -33,6 +33,11 @@ class Paket_model extends CI_model
         }
     }
 
+    public function update_customer($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where );
+    }
+
 }
 
 ?>
