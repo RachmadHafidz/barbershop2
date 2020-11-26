@@ -25,7 +25,7 @@ class Data_customer extends CI_Controller
         $this-> _rules();
 
         if($this->form_validation->run() == FALSE) {
-            $this->tambah_data();
+            $this->tambah_customer();
         }else{
             
             $nama                   = $this->input->post('nama');
@@ -117,7 +117,7 @@ class Data_customer extends CI_Controller
         $where = array(
             'id_customer' => $id
         );
-        $this->paket_model->update_paket('customer', $data, $where);
+        $this->paket_model->update_customer('customer', $data, $where);
         $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Data Berhasil Diupdate!.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

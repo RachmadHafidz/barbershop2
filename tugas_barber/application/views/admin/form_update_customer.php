@@ -23,14 +23,14 @@
                         <input type="text" name="username" class="form-control" value="<?php echo $cs->username ?>">
                         <?php echo form_error('username','<div class= "text-small text-danger">','</div>') ?>
                     </div>
-                    
-                    </div>
-                    <div class="col-md-6">
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" name="password" class="form-control" value="<?php echo $cs->password ?>">
                         <?php echo form_error('password','<div class= "text-small text-danger">','</div>') ?>
                     </div>
+                    
+                    </div>
+                    <div class="col-md-6">                    
                     <div class="form-group">
                         <label>Alamat</label>
                         <input type="text" name="alamat" class="form-control" value="<?php echo $cs->alamat ?>">

@@ -1,7 +1,7 @@
 <div class="main-content">
     <section class="section">
           <div class="section-header">
-            <h1>Form Input Data Paket Cukur</h1>
+            <h1>Form Input Data Customer</h1>
           </div>
     </section>
 
