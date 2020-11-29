@@ -33,7 +33,7 @@ class Registrasi extends CI_Controller{
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>');
-        redirect('auth/login');
+        redirect('customer2/login');
         }
 
        

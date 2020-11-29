@@ -2,7 +2,7 @@
 
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/navbar-logo.svg" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,35 +21,35 @@
             </div>
         </nav>
         <!-- Masthead-->
-        
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Selamat Datang Di Website Kami!</div>
+                <div class="masthead-heading text-uppercase">Mau Order Hari Ini?</div>
+                <a class="btn btn-primary btn-xl text-uppercase  js-scroll-trigger" href="#services">Lihat Paket Cukur</a>
+            </div>
+        </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
-                <div class="text-center col-mb-3">
-                    <h2 class="section-heading text-uppercase">Fitur Kami</h2>
-                    <h3 class="section-subheading text-muted">Silahkan Melihat FItur Yang Tersedia</h3>
-                </div>
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>            
                 <div class="row text-center">
-                    <div class="col-md-6 ml-5">                    
+                <?php foreach($paket as $pk) : ?>
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">ORDER</h4>
-                        <p class="text-muted"></p>
-                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                    
-                    </div>                    
-                    <div class="col-md-4">                        
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sticky-note fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">AMBIL ANTRIAN</h4>
-                        <p class="text-muted"></p>
-                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="#<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                        
+                        <h4 class="my-3"><?php echo $pk->nama_paket ?></h5></h4>
+                        <p class="text-muted"><?php echo $pk->detail_paket ?></p>
+                        <p class="text-muted"><?php echo $pk->harga ?></p>
+                        <a href="<?php echo base_url('customer2/pengisian_data/')   ?>" class="btn btn-primary mb-3">PILIH</a>
                     </div>
-                </div>
-            </div>
+                    <?php endforeach; ?>                    
+                </div>                
+            </div>            
         </section>
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">

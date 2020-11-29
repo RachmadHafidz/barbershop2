@@ -85,6 +85,7 @@
     </span>
       <p class="text-muted"><?php echo $pk->harga ?></p>
       <p class="text-muted"><?php echo $pk->detail_paket ?></p>
+      <p class="text-muted"><?php echo $pk->detail_paket ?></p>
     </div>
     <div class="card-footer">
       <small class="text-muted">Last updated 3 mins ago</small>
