@@ -11,11 +11,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#services">Fitur Kami</a></li>
+                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#services">Paket Cukur</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#portfolio">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#about">Barberman</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-link"><a href="<?php echo base_url('customer2/login') ?>">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +46,7 @@
                         <h4 class="my-3"><?php echo $pk->nama_paket ?></h5></h4>
                         <p class="text-muted"><?php echo $pk->detail_paket ?></p>
                         <p class="text-muted"><?php echo $pk->harga ?></p>
-                        <a href="<?php echo base_url('customer2/pengisian_data/')   ?>" class="btn btn-primary mb-3">PILIH</a>
+                        <a href="<?php echo base_url('customer2/pengisian_data/tambah_order/').$pk->id_paket   ?>" class="btn btn-primary mb-3">PILIH</a>
                     </div>
                     <?php endforeach; ?>                    
                 </div>                
