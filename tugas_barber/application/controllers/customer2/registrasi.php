@@ -13,9 +13,10 @@ class Registrasi extends CI_Controller{
         }else{
             $nama                   = $this->input->post('nama');
             $username               = $this->input->post('username');
-            $password               = $this->input->post('password');
+            $password               = md5($this->input->post('password'));
             $alamat                 = $this->input->post('alamat');
             $no_telepon             = $this->input->post('no_telepon');
+            $role_id                = '2';
         
         $data = array(
             
@@ -23,7 +24,8 @@ class Registrasi extends CI_Controller{
             'username'      => $username,
             'password'      => $password,
             'alamat'        => $alamat,
-            'no_telepon'    => $no_telepon
+            'no_telepon'    => $no_telepon,
+            'role_id'       => $role_id
         );
 
         $this->paket_model->insert_data($data,'customer');
