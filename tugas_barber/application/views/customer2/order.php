@@ -24,6 +24,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+            <?php echo $this->session->flashdata('pesan') ?>  
                 <div class="masthead-subheading">Selamat Datang Di Website Kami!</div>
                 <div class="masthead-heading text-uppercase">Mau Order Hari Ini?</div>
                 <a class="btn btn-primary btn-xl text-uppercase  js-scroll-trigger" href="#services">Lihat Paket Cukur</a>
@@ -35,7 +36,9 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>            
+                </div> 
+                
+                  
                 <div class="row text-center">
                 <?php foreach($paket as $pk) : ?>
                     <div class="col-lg-4 col-md-6 mb-4">
