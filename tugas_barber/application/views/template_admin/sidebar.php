@@ -197,11 +197,9 @@
               </div>
             </div>
           </li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in 5 min ago</div>
+          <li class="nav-link"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
+            <div class="d-sm-none d-lg-inline-block">Hallo <?php echo $this->session->userdata('nama') ?> </div></a>
+            <div class="dropdown-menu dropdown-menu-right">            
               <a href="features-profile.html" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
               </a>
@@ -247,6 +245,9 @@
               </li>
               <li>
               <a class="nav-link" href="<?php echo base_url('admin/data_transaksi') ?>"><i class="fas fa-database"></i> <span>Data Transaksi</span></a>
+              </li>
+              <li>
+              <a class="nav-link dropdown-item has-icon text-danger"  href="<?php echo base_url('customer2/login/logout') ?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
               </li>
             </ul>
 

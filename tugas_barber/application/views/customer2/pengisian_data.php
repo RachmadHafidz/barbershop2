@@ -53,12 +53,12 @@
 
                             <div class="form-group">
                                 <label>Tanggal Order</label>                        
-                                <input type="date" name="tanggal_order" class="form-control">                    
+                                <input type="date" name="tanggal_order" class="form-control">                                                  
                             </div>
 
                             <div class="form-group">
                                 <label>Alamat Lengkap</label>                        
-                                <input type="text" name="alamat" class="form-control">                    
+                                <input type="text" name="alamat" class="form-control">                                                  
                             </div>
 
                             <button type="submit" class="btn btn-warning">Order</button>

@@ -27,23 +27,20 @@
             <img src="<?php echo base_url('assets/assets_admin') ?>/assets/img/slider2.jpg" alt="logo" width="80" class="shadow-light rounded-circle mb-5 mt-2">
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Stisla</span></h4>
             <p class="text-muted">Before you get started, you must login or register if you don't already have an account.</p>
-            <form method="POST" action="#" class="needs-validation" novalidate="">
+            <span class = "m-2"><?php echo $this->session->flashdata('pesan') ?></span>
+            <form method="POST" action="<?php echo base_url('customer2/login') ?>" >
               <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
-                <div class="invalid-feedback">
-                  Please fill in your email
-                </div>
+                <label for="username">Username</label>
+                <input id="username" type="username" class="form-control" name="username" tabindex="1"  autofocus>
+                <?php echo form_error('username','<div class="text-danger text small">','</div>') ?>
               </div>
 
               <div class="form-group">
                 <div class="d-block">
                   <label for="password" class="control-label">Password</label>
                 </div>
-                <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                <div class="invalid-feedback">
-                  please fill in your password
-                </div>
+                <input id="password" type="password" class="form-control" name="password" tabindex="2">
+                <?php echo form_error('password','<div class="text-danger text small">','</div>') ?>
               </div>
 
               <div class="form-group">
@@ -68,7 +65,7 @@
             </form>
 
             <div class="text-center mt-5 text-small">
-              Copyright &copy; Your Company. Made with 💙 by Stisla
+              Copyright &copy; Your Company
               <div class="mt-2">
                 <a href="#">Privacy Policy</a>
                 <div class="bullet"></div>
