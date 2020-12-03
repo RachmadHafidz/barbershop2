@@ -14,7 +14,29 @@
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#portfolio">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#about">Baberman</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-link"><a href="<?php echo base_url('customer2/login') ?>">Login</a></li>
+                        <li class="nav-item">                        
+                        <?php if ($this->session->userdata('nama')) { ?>                                                                     
+                        <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
+                            <div class="d-sm-none d-lg-inline-block">Hallo <?php echo $this->session->userdata('nama') ?> 
+                            <?php } else { ?>
+                            <a class="nav-link" href="<?php echo base_url('customer2/login') ?>"><span class="btn btn-sm btn-warning">Login</span></a>    
+                            <?php } ?> </div></a>
+                            <div class="dropdown-menu dropdown-menu-right">            
+                            <a href="features-profile.html" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i> Profile
+                            </a>
+                            <a href="features-activities.html" class="dropdown-item has-icon">
+                                <i class="fas fa-database"></i> Transaksi
+                            </a>
+                            <a href="features-settings.html" class="dropdown-item has-icon">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="<?php echo base_url('customer2/login/logout') ?>" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
