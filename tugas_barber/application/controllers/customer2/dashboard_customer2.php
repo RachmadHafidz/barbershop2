@@ -1,6 +1,7 @@
 <?php
 
 class Dashboard_customer2 extends CI_Controller{
+    
     public function index()
     {
         
