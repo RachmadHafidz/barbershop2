@@ -16,9 +16,11 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<?php echo base_url('assets/assets_customer2/') ?>css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+
+<body id="page-top">
+
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo base_url('assets/assets_customer2/') ?>" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +29,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="<?php echo base_url('customer2/dashboard_customer2') ?>">Halaman Utama</a></li>
                         <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#services">Fitur Kami</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#portfolio">Tentang Kami</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#about">Baberman</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item">                        
                         <?php if ($this->session->userdata('nama')) { ?>                                                                     
                         <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
@@ -54,10 +54,47 @@
                             </a>
                             </div>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
         </nav>
-    </body>
+        
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Selamat Datang Di Website Kami!</div>
+                <div class="masthead-heading text-uppercase">Mau Cukur Hari Ini?</div>
+                <a class="btn btn-primary btn-xl text-uppercase  js-scroll-trigger" href="#services">Lihat Fitur Kami</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Fitur Kami</h2>
+                    <h3 class="section-subheading text-muted">Silahkan Memilih FItur Yang Tersedia</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-6 ml-5">                    
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">ORDER</h4>
+                        <p class="text-muted"></p>
+                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                    
+                    </div>                    
+                    <div class="col-md-4">                        
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-sticky-note fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">AMBIL ANTRIAN</h4>
+                        <p class="text-muted"></p>
+                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>

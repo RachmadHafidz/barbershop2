@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Nov 2020 pada 16.10
+-- Waktu pembuatan: 06 Des 2020 pada 16.13
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.16
 
@@ -46,16 +46,18 @@ CREATE TABLE `customer` (
   `username` varchar(120) NOT NULL,
   `password` varchar(120) NOT NULL,
   `alamat` varchar(120) NOT NULL,
-  `no_telepon` varchar(20) NOT NULL
+  `no_telepon` varchar(20) NOT NULL,
+  `role_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `customer`
 --
 
-INSERT INTO `customer` (`id_customer`, `nama`, `username`, `password`, `alamat`, `no_telepon`) VALUES
-(1, 'ipang', 'ifar', '123', 'mojokerto', '049430292'),
-(2, 'kapten imut', 'e411812115', '333', 'mojokerto', '1234567');
+INSERT INTO `customer` (`id_customer`, `nama`, `username`, `password`, `alamat`, `no_telepon`, `role_id`) VALUES
+(12, 'bagus', 'bagus123', 'caf1a3dfb505ffed0d024130f58c5cfa', 'kedungsari', '085673738383', 2),
+(13, 'admin', 'ipang99', '21232f297a57a5a743894a0e4a801fc3', 'surabaya', '085738382929', 1),
+(14, 'ifar', 'ifar123', '5ec829debe54b19a5f78d9a65b900a39', 'indonesia', '08576665666', 2);
 
 -- --------------------------------------------------------
 
@@ -67,16 +69,46 @@ CREATE TABLE `paket_cukur` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(120) NOT NULL,
   `detail_paket` varchar(120) NOT NULL,
-  `harga` varchar(50) NOT NULL
+  `harga` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `paket_cukur`
 --
 
-INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`) VALUES
-(5, 'Paket Super Hemat', 'cukur + keramasssssssssssssssss', '200.00000000000'),
-(7, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000');
+INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`, `status`) VALUES
+(5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200.000', '1'),
+(8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000', '0'),
+(9, 'Paket Premium', 'cukur + keramas', '100.000', ''),
+(10, 'PAKET HEMATttt', 'cukur + keramas', '200.000', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_order` int(11) NOT NULL,
+  `id_customer` int(11) NOT NULL,
+  `id_paket` int(11) NOT NULL,
+  `nama_paket` varchar(120) NOT NULL,
+  `detail_paket` varchar(120) NOT NULL,
+  `harga` varchar(120) NOT NULL,
+  `alamat` varchar(120) NOT NULL,
+  `tanggal_order` date NOT NULL,
+  `status_order` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat`, `tanggal_order`, `status_order`) VALUES
+(14, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000', 'ds kedungsari dsn kemiri mojokerto', '2020-12-17', 'Belum Selesai'),
+(15, 12, 5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200.00000000000', 'surabaya jawa timur', '2020-12-24', 'Belum Selesai'),
+(16, 14, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'jombang', '2020-12-12', 'Belum Selesai');
 
 --
 -- Indexes for dumped tables
@@ -101,6 +133,12 @@ ALTER TABLE `paket_cukur`
   ADD PRIMARY KEY (`id_paket`);
 
 --
+-- Indeks untuk tabel `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_order`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -114,13 +152,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `paket_cukur`
 --
 ALTER TABLE `paket_cukur`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -5,41 +5,12 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Selamat Datang Di Website Kami!</div>
-                <div class="masthead-heading text-uppercase">Mau Cukur Hari Ini?</div>
-                <a class="btn btn-primary btn-xl text-uppercase  js-scroll-trigger" href="#services">Lihat Fitur Kami</a>
+                
+                <div class="masthead-heading masthead-subheading text-uppercase">SELAMAT DATANG DI WEBSITE KAMI!</div>               
+                <a class="btn btn-primary btn-xl text-uppercase  js-scroll-trigger" href="#portfolio">Tentang Kami</a>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Fitur Kami</h2>
-                    <h3 class="section-subheading text-muted">Silahkan Memilih FItur Yang Tersedia</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 ml-5">                    
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">ORDER</h4>
-                        <p class="text-muted"></p>
-                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                    
-                    </div>                    
-                    <div class="col-md-4">                        
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sticky-note fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">AMBIL ANTRIAN</h4>
-                        <p class="text-muted"></p>
-                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Grid-->
+       <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">

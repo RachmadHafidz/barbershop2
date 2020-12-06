@@ -42,9 +42,10 @@ class Paket_model extends CI_model
     {
         $username = set_value('username');
         $password = set_value('password');
-
+        
+        
         $result = $this->db->where('username',$username)
-                            ->where('password',md5($password))
+                            ->where('password',md5($password))                            
                             ->limit(1)
                             ->get('customer');
 

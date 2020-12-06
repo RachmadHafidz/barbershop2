@@ -54,13 +54,13 @@
                     <div class="card-header">
                         <div class="card-body">
                             <?php foreach ($detail as $dt) : ?>
-                            <form method="POST" action="<?php echo base_url('customer2/pengisian_data/tambah_order_aksi') ?>">
+                            <form method="POST" action="<?php echo base_url('customer2/pengisian_data/tambah_order_aksi') ?>" class="needs-validation" >                                                        
                             <div class="form-group">
-                                <label>Nama Paket</label>
+                                <label>Nama Paket</label>                                
                                 <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
                                 <input type="text" name="nama_paket" class="form-control" value="<?php echo $dt->nama_paket ?>" readonly>                    
                             </div>
-
+                                                       
                             <div class="form-group">
                                 <label>Detail Paket</label>
                                 <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
@@ -75,12 +75,12 @@
 
                             <div class="form-group">
                                 <label>Tanggal Order</label>                        
-                                <input type="date" name="tanggal_order" class="form-control">                                                  
+                                <input type="date" name="tanggal_order" class="form-control"  required auto-focus>                                                                                 
                             </div>
 
                             <div class="form-group">
                                 <label>Alamat Lengkap</label>                        
-                                <input type="text" name="alamat" class="form-control">                                                  
+                                <input type="text" name="alamat" class="form-control"  required auto-focus>                                                                            
                             </div>
 
                             <button type="submit" class="btn btn-warning">Order</button>

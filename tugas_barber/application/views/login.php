@@ -28,10 +28,11 @@
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Stisla</span></h4>
             <p class="text-muted">Before you get started, you must login or register if you don't already have an account.</p>
             <span class = "m-2"><?php echo $this->session->flashdata('pesan') ?></span>
-            <form method="POST" action="<?php echo base_url('customer2/login') ?>" >
+            <form method="POST" action="<?php echo base_url('customer2/login/index') ?>" >
               <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" type="username" class="form-control" name="username" tabindex="1"  autofocus>
+                <?php echo $this->session->set_userdata('id_customer') ?>
                 <?php echo form_error('username','<div class="text-danger text small">','</div>') ?>
               </div>
 

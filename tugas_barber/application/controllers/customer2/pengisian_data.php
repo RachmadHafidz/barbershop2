@@ -13,6 +13,7 @@ class Pengisian_data extends CI_Controller
     public function tambah_order_aksi()
     {
         
+        $id_customer         = $this->session->userdata('id_customer');
         $id_paket            = $this->input->post('id_paket');
         $nama_paket          = $this->input->post('nama_paket');
         $detail_paket        = $this->input->post('detail_paket');
@@ -22,6 +23,7 @@ class Pengisian_data extends CI_Controller
 
         $data = array(
             
+            'id_customer'       => $id_customer,
             'id_paket'          => $id_paket,
             'nama_paket'        => $nama_paket,
             'detail_paket'      => $detail_paket,

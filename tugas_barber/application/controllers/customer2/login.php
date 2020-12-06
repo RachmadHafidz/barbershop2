@@ -12,7 +12,7 @@ class Login extends CI_Controller{
             $username = $this->input->post('username');
             $password = md5($this->input->post('password'));
 
-            $cek = $this->paket_model->cek_login($username, $password);
+            $cek = $this->paket_model->cek_login($username, $password,);
             
             if($cek == FALSE)
             {
@@ -24,9 +24,12 @@ class Login extends CI_Controller{
                 </div>');
                 redirect('customer2/login');
             }else{
+                
                 $this->session->set_userdata('username',$cek->username);
                 $this->session->set_userdata('role_id',$cek->role_id);
                 $this->session->set_userdata('nama',$cek->nama);
+                $this->session->set_userdata('id_customer',$cek->id_customer);
+                
 
                 switch ($cek->role_id){
                     case 1: redirect('admin/dashboard_admin');
