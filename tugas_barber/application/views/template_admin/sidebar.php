@@ -247,6 +247,9 @@
               <a class="nav-link" href="<?php echo base_url('admin/data_transaksi') ?>"><i class="fas fa-database"></i> <span>Data Transaksi</span></a>
               </li>
               <li>
+              <a class="nav-link" href="<?php echo base_url('admin/rekening') ?>"><i class="fas fa-database"></i> <span>Rekening Bank</span></a>
+              </li>
+              <li>
               <a class="nav-link dropdown-item has-icon text-danger"  href="<?php echo base_url('customer2/login/logout') ?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
               </li>
             </ul>

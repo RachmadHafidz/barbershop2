@@ -32,7 +32,7 @@
             <td><?php echo $tr->status_order ?></td>
             <td>
             <?php 
-            if($tr->status == "1"){
+            if($tr->status_order == "1"){
               echo "-";
             }else { ?>
             

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Des 2020 pada 13.46
+-- Waktu pembuatan: 07 Des 2020 pada 18.25
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.16
 
@@ -86,6 +86,28 @@ INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`, `s
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `rekening`
+--
+
+CREATE TABLE `rekening` (
+  `id_bank` int(11) NOT NULL,
+  `nama_bank` varchar(120) NOT NULL,
+  `no_rekening` varchar(120) NOT NULL,
+  `atas_nama` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `rekening`
+--
+
+INSERT INTO `rekening` (`id_bank`, `nama_bank`, `no_rekening`, `atas_nama`) VALUES
+(1, 'BNI', '3673832992726268', 'rijal'),
+(2, 'BCA', '6728328317317', 'gede'),
+(3, 'BRI', '83839302923829', 'ifar');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `transaksi`
 --
 
@@ -106,10 +128,9 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat_order`, `tanggal_order`, `status_order`) VALUES
-(14, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', 'ds kedungsari dsn kemiri mojokerto', '2020-12-17', 'Belum Selesai'),
-(16, 14, 9, 'Paket Premium', 'cukur + keramas', '100000', 'jombang', '2020-12-12', 'Belum Selesai'),
-(17, 14, 5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200000', 'surabaya sunan ampel', '2020-12-08', 'Belum Selesai'),
-(18, 12, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'papua barat', '2020-12-13', 'Belum Selesai');
+(18, 12, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'papua barat', '2020-12-13', ' Selesai'),
+(19, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', 'jombang jawa timur', '2020-12-12', ' Belum Selesai'),
+(20, 14, 9, 'Paket Premium', 'cukur + keramas', '100000', 'kalimantan', '2020-12-15', 'Selesai');
 
 --
 -- Indexes for dumped tables
@@ -132,6 +153,12 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `paket_cukur`
   ADD PRIMARY KEY (`id_paket`);
+
+--
+-- Indeks untuk tabel `rekening`
+--
+ALTER TABLE `rekening`
+  ADD PRIMARY KEY (`id_bank`);
 
 --
 -- Indeks untuk tabel `transaksi`
@@ -162,10 +189,16 @@ ALTER TABLE `paket_cukur`
   MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT untuk tabel `rekening`
+--
+ALTER TABLE `rekening`
+  MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

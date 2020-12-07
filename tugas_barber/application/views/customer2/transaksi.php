@@ -19,14 +19,20 @@
 
             <?php $no=1; foreach($transaksi as $tr) :   ?>
             <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $tr->nama ?></td>
-            <td><?php echo $tr->nama_paket ?></td>
-            <td><?php echo $tr->detail_paket ?></td>
-            <td>Rp. <?php echo number_format($tr->harga,0,',','.')  ?></td>
-            <td><?php echo date('d/m/y', strtotime($tr->tanggal_order));  ?></td>
-            <td><?php echo $tr->alamat_order ?></td>
-
+                <td><?php echo $no++ ?></td>
+                <td><?php echo $tr->nama ?></td>
+                <td><?php echo $tr->nama_paket ?></td>
+                <td><?php echo $tr->detail_paket ?></td>
+                <td>Rp. <?php echo number_format($tr->harga,0,',','.')  ?></td>
+                <td><?php echo date('d/m/Y', strtotime($tr->tanggal_order));  ?></td>
+                <td><?php echo $tr->alamat_order ?></td>
+                <td>
+                    <?php if($tr->status_order == "Selesai") { ?>
+                        <button class="btn btn-sm btn-danger">Order Selesai</button>           
+                    <?php }else{ ?>
+                        <a href="<?php echo base_url('customer2/transaksi/pembayaran/' .$tr->id_order) ?>" class="btn btn-sm btn-success">Cek Pembayaran</a>
+                    <?php } ?>
+                </td>
 
             </tr>
             <?php endforeach; ?>

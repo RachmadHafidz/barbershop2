@@ -26,6 +26,18 @@ class Transaksi extends CI_Controller{
         $this->load->view('template_customer2/footer');
     }
 
+    public function pembayaran($id)
+    {
+        $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, paket_cukur pk, customer cs 
+        WHERE tr.id_paket = pk.id_paket AND tr.id_customer = cs.id_customer AND tr.alamat_order != cs.alamat 
+        AND tr.id_order = '$id' ORDER BY id_order DESC")->result();
+        $data['bank'] = $this->paket_model->get_data('rekening')->result();
+        $this->load->view('template_customer2/header2');
+        $this->load->view('customer2/pembayaran',$data);
+        $this->load->view('template_customer2/footer'); 
+        
+    }
+
 }
 
 ?>
