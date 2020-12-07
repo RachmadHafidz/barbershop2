@@ -29,7 +29,7 @@
                         </span>
                         <h4 class="my-3"><?php echo $pk->nama_paket ?></h5></h4>
                         <p class="text-muted"><?php echo $pk->detail_paket ?></p>
-                        <p class="text-muted"><?php echo $pk->harga ?></p>
+                        <p class="text-muted">Rp. <?php echo number_format($pk->harga,0,',','.')  ?></p>
                         <a href="<?php echo base_url('customer2/pengisian_data/tambah_order/').$pk->id_paket   ?>" class="btn btn-primary mb-3">PILIH</a>
                     </div>
                     <?php endforeach; ?>                    

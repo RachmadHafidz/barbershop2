@@ -80,7 +80,7 @@
 
                             <div class="form-group">
                                 <label>Alamat Lengkap</label>                        
-                                <input type="text" name="alamat" class="form-control"  required auto-focus>                                                                            
+                                <input type="text" name="alamat_order" class="form-control"  required auto-focus>                                                                            
                             </div>
 
                             <button type="submit" class="btn btn-warning">Order</button>

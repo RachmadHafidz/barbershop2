@@ -29,8 +29,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="<?php echo base_url('customer2/dashboard_customer2') ?>">Halaman Utama</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#services">Fitur Kami</a></li>
+                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="<?php echo base_url('customer2/dashboard_customer2') ?>">Halaman Utama</a></li>                        
                         <li class="nav-item">                        
                         <?php if ($this->session->userdata('nama')) { ?>                                                                     
                         <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
@@ -45,7 +44,7 @@
                             <a href="<?php echo base_url('customer2/fitur') ?>" class="dropdown-item has-icon">
                                 <i class="fas fa-database"></i> Fitur Kami
                             </a>
-                            <a href="features-settings.html" class="dropdown-item has-icon">
+                            <a href="<?php echo base_url('customer2/transaksi') ?>" class="dropdown-item has-icon">
                                 <i class="fas fa-cog"></i> Transaksi
                             </a>
                             <div class="dropdown-divider"></div>

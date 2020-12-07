@@ -18,7 +18,7 @@ class Pengisian_data extends CI_Controller
     public function tambah_order($id)
     {
         $data['detail'] = $this->paket_model->ambil_id_paket($id);
-        $this->load->view('template_customer2/header');
+        $this->load->view('template_customer2/header2');
         $this->load->view('customer2/pengisian_data' ,$data);
         $this->load->view('template_customer2/footer');
     }
@@ -32,7 +32,7 @@ class Pengisian_data extends CI_Controller
         $detail_paket        = $this->input->post('detail_paket');
         $harga               = $this->input->post('harga');
         $tanggal_order       = $this->input->post('tanggal_order');
-        $alamat              = $this->input->post('alamat');
+        $alamat_order              = $this->input->post('alamat_order');
 
         $data = array(
             
@@ -42,7 +42,7 @@ class Pengisian_data extends CI_Controller
             'detail_paket'      => $detail_paket,
             'harga'             => $harga,
             'tanggal_order'     => $tanggal_order,
-            'alamat'            => $alamat,
+            'alamat_order'      => $alamat_order,
             'status_order'      => 'Belum Selesai',
         );
 

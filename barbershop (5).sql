@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Des 2020 pada 16.13
+-- Waktu pembuatan: 07 Des 2020 pada 13.46
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.16
 
@@ -78,10 +78,10 @@ CREATE TABLE `paket_cukur` (
 --
 
 INSERT INTO `paket_cukur` (`id_paket`, `nama_paket`, `detail_paket`, `harga`, `status`) VALUES
-(5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200.000', '1'),
-(8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000', '0'),
-(9, 'Paket Premium', 'cukur + keramas', '100.000', ''),
-(10, 'PAKET HEMATttt', 'cukur + keramas', '200.000', '');
+(5, 'Paket Super Soni', 'cukur + keramass', '200000', '1'),
+(8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', '0'),
+(9, 'Paket Premium', 'cukur + keramas', '100000', ''),
+(10, 'PAKET HEMATttt', 'cukur + keramas', '200000', '');
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE `transaksi` (
   `nama_paket` varchar(120) NOT NULL,
   `detail_paket` varchar(120) NOT NULL,
   `harga` varchar(120) NOT NULL,
-  `alamat` varchar(120) NOT NULL,
+  `alamat_order` varchar(120) NOT NULL,
   `tanggal_order` date NOT NULL,
   `status_order` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -105,10 +105,11 @@ CREATE TABLE `transaksi` (
 -- Dumping data untuk tabel `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat`, `tanggal_order`, `status_order`) VALUES
-(14, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200.000', 'ds kedungsari dsn kemiri mojokerto', '2020-12-17', 'Belum Selesai'),
-(15, 12, 5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200.00000000000', 'surabaya jawa timur', '2020-12-24', 'Belum Selesai'),
-(16, 14, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'jombang', '2020-12-12', 'Belum Selesai');
+INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat_order`, `tanggal_order`, `status_order`) VALUES
+(14, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', 'ds kedungsari dsn kemiri mojokerto', '2020-12-17', 'Belum Selesai'),
+(16, 14, 9, 'Paket Premium', 'cukur + keramas', '100000', 'jombang', '2020-12-12', 'Belum Selesai'),
+(17, 14, 5, 'Paket Super Soni', 'cukur + keramasssssssssssssssss', '200000', 'surabaya sunan ampel', '2020-12-08', 'Belum Selesai'),
+(18, 12, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'papua barat', '2020-12-13', 'Belum Selesai');
 
 --
 -- Indexes for dumped tables
@@ -164,7 +165,7 @@ ALTER TABLE `paket_cukur`
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
