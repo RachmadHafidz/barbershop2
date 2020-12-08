@@ -38,6 +38,43 @@ class Transaksi extends CI_Controller{
         
     }
 
+    public function pembayaran_aksi()
+    {
+        $id     = $this->input->post('id_order');
+        $bukti_pembayaran = $_FILES['bukti_pembayaran']['name'];
+        if($bukti_pembayaran){
+            $config ['upload_path']     = '.assets/assets_customer2/upload';
+            $config ['allowed_types']   = 'pdf|jpg|jpeg|png|tiff';
+
+            $this->load->library('upload', $config);
+
+            if($this->upload->do_upload('bukti_pembayaran')){
+                $bukti_pembayaran=$this->upload->data('file_name');
+                $this->db->set('bukti_pembayaran', $bukti_pembayaran);
+            }else{
+                echo $this->upload->display_errors();
+            }
+        }
+
+        $data= array(
+            'bukti_pembayaran' => $bukti_pembayaran,
+        );
+
+        $where = array(
+            'id_order' => $id
+        );
+
+        $this->paket_model->update_paket('transaksi', $data, $where );
+        $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Bukti Pembayaran Anda Berhasil Di Upload!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>');
+        redirect('customer2/transaksi');
+
+    }
+
 }
 
 ?>

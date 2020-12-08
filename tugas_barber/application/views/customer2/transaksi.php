@@ -4,6 +4,9 @@
         <div class="card-header">
             Data Tansaksi Anda
         </div>
+
+        
+        <span class="mt-2 p-2"><?php echo $this->session->flashdata('pesan') ?></span>
         <div class="card-body">
             <table class="table table-bordered table-striped">
             <tr>

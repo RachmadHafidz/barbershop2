@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Des 2020 pada 18.25
+-- Waktu pembuatan: 08 Des 2020 pada 15.20
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.16
 
@@ -120,17 +120,19 @@ CREATE TABLE `transaksi` (
   `harga` varchar(120) NOT NULL,
   `alamat_order` varchar(120) NOT NULL,
   `tanggal_order` date NOT NULL,
-  `status_order` varchar(50) NOT NULL
+  `status_order` varchar(50) NOT NULL,
+  `bukti_pembayaran` varchar(120) NOT NULL,
+  `status_pembayaran` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat_order`, `tanggal_order`, `status_order`) VALUES
-(18, 12, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'papua barat', '2020-12-13', ' Selesai'),
-(19, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', 'jombang jawa timur', '2020-12-12', ' Belum Selesai'),
-(20, 14, 9, 'Paket Premium', 'cukur + keramas', '100000', 'kalimantan', '2020-12-15', 'Selesai');
+INSERT INTO `transaksi` (`id_order`, `id_customer`, `id_paket`, `nama_paket`, `detail_paket`, `harga`, `alamat_order`, `tanggal_order`, `status_order`, `bukti_pembayaran`, `status_pembayaran`) VALUES
+(18, 12, 9, 'Paket Premium', 'cukur + keramas', '100.000', 'papua barat', '2020-12-13', ' Selesai', '', 0),
+(19, 14, 8, 'PAKET LEGREK', 'CUKUR RAMBUTtttt', '200000', 'jombang jawa timur', '2020-12-12', ' Belum Selesai', 'daftar ulang.jpeg', 0),
+(20, 14, 9, 'Paket Premium', 'cukur + keramas', '100000', 'kalimantan', '2020-12-15', 'Selesai', '', 0);
 
 --
 -- Indexes for dumped tables
