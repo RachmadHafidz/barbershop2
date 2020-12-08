@@ -167,6 +167,20 @@
                 </ul>
             </div>
         </section>
+        <section class="page-section bg-light" id="map">
+            <div class ="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">LAREOZ BARBERSHOP</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.4756122479607!2d114.36618416925401!3d-8.23100358958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15ad2fa0216f3%3A0x3d3c3223f99a07a0!2sLareoz%20Barbershop!5e1!3m2!1sid!2sid!4v1607418752935!5m2!1sid!2sid" 
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
