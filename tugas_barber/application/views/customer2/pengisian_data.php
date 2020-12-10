@@ -70,7 +70,7 @@
                             <div class="form-group">
                                 <label>Harga Paket</label>
                                 <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
-                                <input type="text" name="harga" class="form-control" value="<?php echo $dt->harga ?>" readonly>                    
+                                <input type="text" name="harga" class="form-control" value="Rp. <?php echo number_format($dt->harga,0,',','.')  ?>" readonly>                    
                             </div>
 
                             <div class="form-group">

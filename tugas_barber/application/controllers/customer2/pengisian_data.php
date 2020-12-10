@@ -32,7 +32,7 @@ class Pengisian_data extends CI_Controller
         $detail_paket        = $this->input->post('detail_paket');
         $harga               = $this->input->post('harga');
         $tanggal_order       = $this->input->post('tanggal_order');
-        $alamat_order              = $this->input->post('alamat_order');
+        $alamat_order        = $this->input->post('alamat_order');
 
         $data = array(
             

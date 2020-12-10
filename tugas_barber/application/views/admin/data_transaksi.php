@@ -15,6 +15,7 @@
               <th>Alamat</th>
               <th>Tanggal Order</th>
               <th>Status Order</th>
+              <th>Cek Pembayaran</th>
               <th>Action</th>
             </tr>
           
@@ -31,8 +32,19 @@
             <td><?php echo date('d/m/y', strtotime($tr->tanggal_order));  ?></td>
             <td><?php echo $tr->status_order ?></td>
             <td>
+              <center>
+                <?php
+                if(empty($tr->bukti_pembayaran)) { ?>
+                  <button class="btn btn-sm btn-danger"><i class="fas fa-times-circle"></i></button>
+                <?php }else{ ?>
+                  <a class="btn btn-sm btn-success" href="<?php echo base_url('admin/data_transaksi/pembayaran/'. $tr->id_order) ?>">
+                  <i class="fas fa-check-circle"></i></a>
+                <?php } ?>
+              </center>
+            </td>
+            <td>
             <?php 
-            if($tr->status_order == "1"){
+            if($tr->status == "1"){
               echo "-";
             }else { ?>
             

@@ -43,7 +43,7 @@ class Transaksi extends CI_Controller{
         $id     = $this->input->post('id_order');
         $bukti_pembayaran = $_FILES['bukti_pembayaran']['name'];
         if($bukti_pembayaran){
-            $config ['upload_path']     = '.assets/assets_customer2/upload';
+            $config ['upload_path']     = 'assets/assets_customer2/upload';
             $config ['allowed_types']   = 'pdf|jpg|jpeg|png|tiff';
 
             $this->load->library('upload', $config);

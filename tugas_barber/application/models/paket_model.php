@@ -57,6 +57,12 @@ class Paket_model extends CI_model
         }
     }
 
+    public function downloadbayar($id)
+    {
+        $query = $this->db->get_where('transaksi', array('id_order' => $id));
+        return $query->row_array();
+    }
+
 }
 
 ?>

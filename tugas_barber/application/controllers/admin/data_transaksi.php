@@ -25,5 +25,40 @@ class Data_transaksi extends CI_Controller
         $this->load->view('template_admin/footer');
     }
 
+    public function pembayaran($id)
+    {
+        $where = array('id_order' => $id);
+        $data['pembayaran'] = $this->db->query("SELECT * FROM transaksi WHERE id_order = '$id'")->result();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/konfirmasi_pembayaran', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function cek_pembayaran()
+    {
+        $id                 = $this->input->post('id_order');
+        $status_pembayaran  = $this->input->post('status_pembayaran');
+
+        $data= array(
+            'status_pembayaran' => $status_pembayaran,
+        );
+
+        $where = array(
+            'id_order' => $id
+        );
+
+        $this->paket_model->update_paket('transaksi',$data,$where);
+        redirect('admin/data_transaksi');
+    }
+
+    public function download_bayar($id)
+    {
+        $this->load->helper('download');
+        $filePembayaran = $this->paket_model->downloadbayar($id);
+        $file = 'assets/assets_customer2/upload/'. $filePembayaran['bukti_pembayaran'];
+        force_download($file, NULL);
+    }
+
 }
 ?>
