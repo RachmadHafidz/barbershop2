@@ -42,7 +42,7 @@
                         <tr>
                             <th></th>
                             <td></td>
-                            <td><a href="" class="btn btn-sm btn-secondary">Print Invoice Pembayaran</td>
+                            <td><a href="<?php echo base_url('customer2/transaksi/invoice/'. $tr->id_order)  ?>" class="btn btn-sm btn-secondary">Print Invoice Pembayaran</td>
                         </tr>
 
                         <?php endforeach; ?>

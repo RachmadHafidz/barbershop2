@@ -75,6 +75,14 @@ class Transaksi extends CI_Controller{
 
     }
 
+    public function invoice($id)
+    {
+        $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, paket_cukur pk, customer cs 
+        WHERE tr.id_paket = pk.id_paket AND tr.id_customer = cs.id_customer AND tr.id_order = '$id'")->result();
+        $data['bank'] = $this->paket_model->get_data('rekening')->result();
+        $this->load->view('customer2/invoice', $data);
+    }
+
 }
 
 ?>
