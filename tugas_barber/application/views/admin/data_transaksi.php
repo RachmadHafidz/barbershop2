@@ -28,7 +28,7 @@
             <td><?php echo $tr->nama_paket ?></td>
             <td><?php echo $tr->detail_paket ?></td>
             <td>Rp. <?php echo number_format($tr->harga,0,',','.')  ?></td>
-            <td><?php echo $tr->alamat ?></td>
+            <td><?php echo $tr->alamat_order ?></td>
             <td><?php echo date('d/m/y', strtotime($tr->tanggal_order));  ?></td>
             <td><?php echo $tr->status_order ?></td>
             <td>
@@ -49,9 +49,9 @@
             }else { ?>
             
               <div class="row">
-                <a class="btn btn-sm btn-success mr-2" href="<?php echo base_url('admin/data_transaki/transaksi_selesai')?>">
+                <a class="btn btn-sm btn-success mr-2" href="<?php echo base_url('admin/data_transaksi/transaksi_selesai/'.$tr->id_order)?>">
                 <i class='fas fa-check'></i></a>
-                <a class="btn btn-sm btn-danger" href="<?php echo base_url('admin/data_transaki/transaksi_batal')?>">
+                <a class="btn btn-sm btn-danger" href="<?php echo base_url('admin/data_transaki/transaksi_batal/'.$tr->id_order)?>">
                 <i class='fas fa-times'></i></a>
               </div>
             <?php } ?>

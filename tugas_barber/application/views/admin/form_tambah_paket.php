@@ -30,8 +30,8 @@
                         <?php echo form_error('harga','<div class= "text-small text-danger">','</div>') ?>
                     </div>
 
-                  <button type="submit" class="btn btn-primary mt-4">SIMPAN</button>
-                  <button type="reset" class="btn btn-danger mt-4">RESET</button>
+                    <button type="submit" class="btn btn-primary mt-4">SIMPAN</button>
+                    <button type="reset" class="btn btn-danger mt-4">RESET</button>
 
 
                     </div>
