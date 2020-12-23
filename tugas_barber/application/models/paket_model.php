@@ -63,6 +63,22 @@ class Paket_model extends CI_model
         return $query->row_array();
     }
 
+    public function ambil_id_antrian($id)
+    {
+        $hasil = $this->db->where('id_customer', $id)->get('customer');
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        }else{
+            return false;
+        }
+    }
+
+    public function get_where($where,$table)
+    {
+        return $this->db->get_where($table,$where);
+    }
+
+
 }
 
 ?>

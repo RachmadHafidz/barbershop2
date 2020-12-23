@@ -18,7 +18,7 @@ class Fitur extends CI_Controller{
     {
         
         
-        $this->load->view('customer2/fitur');
+        $this->load->view('customer2/fitur' );
         $this->load->view('template_customer2/footer');
     }
 

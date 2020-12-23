@@ -53,7 +53,7 @@ class Pengisian_data extends CI_Controller
         <span aria-hidden="true">&times;</span>
         </button>
         </div>');
-        redirect('customer2/order','admin/notification');
+        redirect('customer2/order');
     }
 
 }

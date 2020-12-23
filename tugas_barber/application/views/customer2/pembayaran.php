@@ -25,7 +25,7 @@
                             <td><?php echo date('d/m/Y', strtotime($tr->tanggal_order));  ?></td>
                         </tr>
                         <tr>
-                            <th>ALamat Order</th>
+                            <th>Alamat Order</th>
                             <td>:</td>
                             <td><?php echo $tr->alamat_order ?></td>
                         </tr>

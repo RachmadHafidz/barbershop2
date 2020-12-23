@@ -25,7 +25,7 @@
                             <a href="features-profile.html" class="dropdown-item has-icon">
                                 <i class="far fa-user"></i> Profile
                             </a>
-                            <a href="<?php echo base_url('customer2/transaksi') ?>" class="dropdown-item has-icon">
+                            <a href="features-activities.html" class="dropdown-item has-icon">
                                 <i class="fas fa-database"></i> Transaksi
                             </a>
                             <a href="features-settings.html" class="dropdown-item has-icon">
@@ -47,43 +47,35 @@
         <section class="page-section" id="services">
             <div class="container mt-4">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Pengisian Data</h2>
-                    <h3 class="section-subheading text-muted">Silahkan Mengisi Data Order</h3>
+                    <h2 class="section-heading text-uppercase">Ambil Antian Anda</h2>
+                    
                 </div>
                 <div class="card" style="margin top: 200px">
                     <div class="card-header">
                         <div class="card-body">
-                            <?php foreach ($detail as $dt) : ?>
-                            <form method="POST" action="<?php echo base_url('customer2/pengisian_data/tambah_order_aksi') ?>" class="needs-validation" >                                                        
+                        <?php foreach ($antri as $atr) : ?>
+                            <form method="POST" action="<?php echo base_url('customer2/ambil_antrian/tambah_antrian_aksi') ?>" class="needs-validation" >                                                        
                             <div class="form-group">
-                                <label>Nama Paket</label>                                
-                                <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
-                                <input type="text" name="nama_paket" class="form-control" value="<?php echo $dt->nama_paket ?>" readonly>                    
+                                <label>Nama Customer</label>                                
+                                
+                                <input type="text" name="nama" class="form-control" value="<?php echo $atr->nama ?>" readonly>                    
                             </div>
                                                        
                             <div class="form-group">
-                                <label>Detail Paket</label>
-                                <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
-                                <input type="text" name="detail_paket" class="form-control" value="<?php echo $dt->detail_paket ?>" readonly>                    
+                                <label>Alamat</label>
+                                
+                                <input type="text" name="alamat" class="form-control" value="<?php echo $atr->alamat ?>" readonly>                    
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Paket</label>
-                                <input type="hidden" name="id_paket" value="<?php echo $dt->id_paket ?>">
-                                <input type="text" name="harga" class="form-control" value="Rp. <?php echo number_format($dt->harga,0,',','.')  ?>" readonly>                    
+                                <label>No.Hp</label>
+                                
+                                <input type="text" name="no_hp" class="form-control" value="<?php echo $atr->no_telepon?>" >                    
                             </div>
+                                                                                       
+                            
 
-                            <div class="form-group">
-                                <label>Tanggal Order</label>                        
-                                <input type="date" name="tanggal_order" class="form-control"  required auto-focus>                                                                                 
-                            </div>
-
-                            <div class="form-group">
-                                <label>Alamat Lengkap</label>                        
-                                <input type="text" name="alamat_order" class="form-control"  required auto-focus>                                                                            
-                            </div>
-
-                            <button type="submit" class="btn btn-warning">Order</button>
+                            <button type="submit" class="btn btn-warning">Ambil Atrian</button>
                             
                             </form>
                             <?php endforeach; ?>

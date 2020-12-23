@@ -74,6 +74,7 @@
                     <h3 class="section-subheading text-muted">Silahkan Memilih FItur Yang Tersedia</h3>
                 </div>
                 <div class="row text-center">
+               
                     <div class="col-md-6 ml-5">                    
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -82,7 +83,8 @@
                         <h4 class="my-3">ORDER</h4>
                         <p class="text-muted"></p>
                         <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                    
-                    </div>                    
+                    </div>              
+                          
                     <div class="col-md-4">                        
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -90,8 +92,9 @@
                         </span>
                         <h4 class="my-3">AMBIL ANTRIAN</h4>
                         <p class="text-muted"></p>
-                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/order/') ?>">Lihat Detail</a>                        
+                        <a class="btn btn-primary text-uppercase  js-scroll-trigger" href="<?php echo base_url('customer2/ambil_antrian/tambah_antrian/')?>">Lihat Detail</a>                        
                     </div>
+                
                 </div>
             </div>
         </section>

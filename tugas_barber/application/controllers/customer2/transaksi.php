@@ -83,6 +83,20 @@ class Transaksi extends CI_Controller{
         $this->load->view('customer2/invoice', $data);
     }
 
+    public function batal_transaksi($id)
+    {
+        $where = array('id_order' => $id);
+        $data = $this->paket_model->get_where($where,'transaksi')->row();
+        $this->paket_model->delete_data($where,'transaksi');
+        $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Orderan Anda Berhasil Dibatalkan!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>');
+        redirect('customer2/transaksi');
+    }
+
 }
 
 ?>
