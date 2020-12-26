@@ -7,7 +7,8 @@
 
         
         <span class="mt-2 p-2"><?php echo $this->session->flashdata('pesan') ?></span>
-        <div class="card-body">
+        <div class="table-responsive">
+          <div class="card-body">
             <table class="table table-bordered table-striped">
             <tr>
                 <th>NO</th>
@@ -32,9 +33,9 @@
                 <td><?php echo $tr->alamat_order ?></td>
                 <td>
                     <?php if($tr->status_order == "Selesai") { ?>
-                        <button class="btn btn-sm btn-success">Order Selesai</button>           
+                      <a href="<?php echo base_url('customer2/transaksi/pembayaran/' .$tr->id_order) ?>" class="btn btn-sm btn-success">Order Selesai</a>           
                     <?php }else{ ?>
-                        <a href="<?php echo base_url('customer2/transaksi/pembayaran/' .$tr->id_order) ?>" class="btn btn-sm btn-danger">Cek Pembayaran</a>
+                      <a href="<?php echo base_url('customer2/transaksi/pembayaran/' .$tr->id_order) ?>" class="btn btn-sm btn-danger">Cek Pembayaran</a>
                     <?php } ?>
                 </td>
                 <td>
@@ -59,6 +60,7 @@
 
             <?php endforeach; ?>
             </table>
+          </div>
         </div>
     </div>
 </div>

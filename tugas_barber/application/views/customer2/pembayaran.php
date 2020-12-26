@@ -57,7 +57,9 @@
                 </div>
 
                 <div class="card-body">
-                    <p class="text-success mb-3">Silahkan Melakukan Pembayaran</p>
+                    <p class="text-success mb-3">Silahkan Melakukan Pembayaran <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    ?
+                    </button></p>                    
                 </div>
                 <?php foreach($bank as $bk) : ?>
                 <ul class="list-group list-group-flush">
@@ -105,6 +107,25 @@
         <button type="submit" class="btn btn-sm btn-primary">Kirim</button>
       </div>
     </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">INFORMASI!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Batas Pembayaran Orderan 24 Jam Dari Waktu Order , Apabila Dalam Waktu Tersebut Belum Dibayar Admin Akan Membatalkan Orderan Anda
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-success" data-dismiss="modal">Siap</button>        
+      </div>
     </div>
   </div>
 </div>
