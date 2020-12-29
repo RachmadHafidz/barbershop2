@@ -25,8 +25,8 @@
         <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
           <div class="p-4 m-3">
             <img src="<?php echo base_url('assets/assets_admin') ?>/assets/img/slider2.jpg" alt="logo" width="80" class="shadow-light rounded-circle mb-5 mt-2">
-            <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Stisla</span></h4>
-            <p class="text-muted">Before you get started, you must login or register if you don't already have an account.</p>
+            <h4 class="text-dark font-weight-normal">Selamat Datang Di <span class="font-weight-bold">Barbershop Lareoz</span></h4>
+            <p class="text-muted">Silahkan Login Terlebih Dahulu</p>
             <span class = "m-2"><?php echo $this->session->flashdata('pesan') ?></span>
             <form method="POST" action="<?php echo base_url('customer2/login/index') ?>" >
               <div class="form-group">
@@ -44,34 +44,21 @@
                 <?php echo form_error('password','<div class="text-danger text small">','</div>') ?>
               </div>
 
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                  <label class="custom-control-label" for="remember-me">Remember Me</label>
-                </div>
-              </div>
+             
 
-              <div class="form-group text-right">
-                <a href="auth-forgot-password.html" class="float-left mt-3">
-                  Forgot Password?
-                </a>
+              <div class="form-group text-right">                
                 <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
                   Login
                 </button>
               </div>
 
               <div class="mt-5 text-center">
-                Don't have an account? <a href="<?php echo base_url('customer2/registrasi') ?>">Create new one</a>
+                Sudah Mempunyai Akun?<a href="<?php echo base_url('customer2/registrasi') ?>"> Buat Akun Anda</a>
               </div>
             </form>
 
             <div class="text-center mt-5 text-small">
-              Copyright &copy; Your Company
-              <div class="mt-2">
-                <a href="#">Privacy Policy</a>
-                <div class="bullet"></div>
-                <a href="#">Terms of Service</a>
-              </div>
+              Copyright &copy; Barbershop             
             </div>
           </div>
         </div>

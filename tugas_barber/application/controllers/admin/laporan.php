@@ -34,6 +34,20 @@ class Laporan extends CI_Controller
         $this->form_validation->set_rules('dari', 'Dari Tanggal','required');
         $this->form_validation->set_rules('sampai', 'Sampai Tanggal','required');
     }
+
+    public function print_laporan()
+    {
+        $dari = $this->input->get('dari');
+        $sampai = $this->input->get('sampai');
+        $data['title'] = "Print Laporan Transaksi";
+        $data['laporan'] = $this->db->query("SELECT * FROM transaksi tr, paket_cukur pk, customer cs 
+        WHERE tr.id_paket = pk.id_paket AND tr.id_customer = cs.id_customer 
+        AND date(tanggal_order) >= '$dari' AND date(tanggal_order) <= '$sampai' ")->result();
+
+        $this->load->view('template_admin/header',$data);        
+        $this->load->view('admin/print_laporan',$data);
+        
+    }
 }
 
 ?>

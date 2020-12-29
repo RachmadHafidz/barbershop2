@@ -17,9 +17,21 @@ class dashboard_admin extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('template_admin/header');
+        $admin      = $this->db->query("SELECT * FROM customer WHERE role_id = '1'");
+        $customer   = $this->db->query("SELECT * FROM customer WHERE role_id = '2'");
+        $paket      = $this->db->query("SELECT * FROM paket_cukur");
+        $transaksi  = $this->db->query("SELECT * FROM transaksi");
+        $rekening   = $this->db->query("SELECT * FROM rekening");
+        $hubungi    = $this->db->query("SELECT * FROM hubungi");
+        $data['admin']      = $admin->num_rows();        
+        $data['paket']      = $paket->num_rows();
+        $data['customer']   = $customer->num_rows();
+        $data['transaksi']  = $transaksi->num_rows();
+        $data['rekening']   = $rekening->num_rows();
+        $data['hubungi']    = $rekening->num_rows();
+        $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/dashboard_admin');
+        $this->load->view('admin/dashboard_admin', $data);
         $this->load->view('template_admin/footer');
     }
 }

@@ -11,162 +11,51 @@
             </div>
         </header>
        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
+        <section class="page-section" id="portfolio">
+            <div class="container mt-4">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Tentang Kami</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Keunggulan Kami</h2>                    
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/01-thumbnail.jpg" alt="" />
-                            </a>
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">                           
+                            <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/keunggulan.jpeg" alt="" />                            
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-heading">BABERMAN</div>
+                                <div class="portfolio-caption-subheading text-muted mt-3">
+                                Barbershop Lareoz menggunakan barberman atau tukang cukur yang berpengalaman dalam melakukan cukur rambut
+                                dan dapat melayani pelanggan kami dengan sebaik mungkin
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/02-thumbnail.jpg" alt="" />
-                            </a>
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">                          
+                            <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/tempat3.jpg" alt="" />                            
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">TEMPAT CUKUR</div>
+                                <div class="portfolio-caption-subheading text-muted mt-3">
+                                Barbershop Lareoz menggunakan tempat cukur yang dilengkapi dengan AC dan FREE WI-FI 
+                                agar para pelanggan bisa nyaman saat melakukan cukur
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/03-thumbnail.jpg" alt="" />
-                            </a>
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">                           
+                             <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/peralatan.jpg" alt="" />                            
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">PERALATAN CUKUR</div>
+                                <div class="portfolio-caption-subheading text-muted mt-3">
+                                Barbershop Lareoz telah menggunakan peralatan cukur yang modern, karena hasil cukur yang
+                                memuaskan dibutuhkan juga peralatan yang baik
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/04-thumbnail.jpg" alt="" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/05-thumbnail.jpg" alt="" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/portfolio/06-thumbnail.jpg" alt="" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
-        </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Baberman</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/about/1.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4></h4>
-                                <h4 class="subheading"></h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/about/2.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4></h4>
-                                <h4 class="subheading"></h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/about/3.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4></h4>
-                                <h4 class="subheading"></h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/about/4.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4></h4>
-                                <h4 class="subheading"></h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        </section>        
         <section class="page-section bg-light" id="map">
             <div class ="container">
                 <div class="text-center">
@@ -178,8 +67,7 @@
                     </div>
                 </div>
             </div>
-            </section>
-
+        </section>  
 
         <!-- Team-->
         <section class="page-section bg-light" id="team">
@@ -191,7 +79,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>" alt="" />
+                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/team/b.jpeg" alt="" />
                             <h4></h4>
                             <p class="text-muted"></p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -201,7 +89,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>" alt="" />
+                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/team/a.jpeg" alt="" />
                             <h4></h4>
                             <p class="text-muted"></p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -211,7 +99,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>" alt="" />
+                            <img class="mx-auto rounded-circle" src="<?php echo base_url('assets/assets_customer2/') ?>assets/img/team/c.jpeg" alt="" />
                             <h4></h4>
                             <p class="text-muted"></p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -223,6 +111,40 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Hubungi Kami</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <span class="mt-2 p-2"><?php echo $this->session->flashdata('pesan') ?></span>
+                <form  method="POST" action="<?php echo base_url('customer2/hubungi_kami/kirim_pesan') ?>" name="sentMessage" >
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" name="nama" type="text" placeholder="Masukkan Nama Kamu" required="required" data-valnameation-required-message="Please enter your name." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="email" type="email" placeholder="Masukkan E-mail Kamu" required="required" data-valnameation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="pesan" type="text" placeholder="Apa Yang Kamu Tanyakan ?" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>                                                
+                    </div>                 
+                      
+                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">KIRIM</button>
+                    
+                </form>                 
             </div>
         </section>
         

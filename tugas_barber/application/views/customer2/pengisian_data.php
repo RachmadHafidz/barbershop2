@@ -11,9 +11,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">                        
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#portfolio">Tentang Kami</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#about">Baberman</a></li>
-                        <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo base_url('assets/assets_customer2/') ?> js-scroll-trigger" href="<?php echo base_url('customer2/dashboard_customer2') ?>">Halaman Utama</a></li>
+                        
                         <li class="nav-item">                        
                         <?php if ($this->session->userdata('nama')) { ?>                                                                     
                         <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
@@ -22,11 +21,9 @@
                             <a class="nav-link" href="<?php echo base_url('customer2/login') ?>"><span class="btn btn-sm btn-warning">Login</span></a>    
                             <?php } ?> </div></a>
                             <div class="dropdown-menu dropdown-menu-right">            
-                            <a href="features-profile.html" class="dropdown-item has-icon">
-                                <i class="far fa-user"></i> Profile
-                            </a>
+                           
                             <a href="<?php echo base_url('customer2/transaksi') ?>" class="dropdown-item has-icon">
-                                <i class="fas fa-database"></i> Transaksi
+                            <i class="fas fa-money-check"></i> Transaksi
                             </a>
                             <a href="features-settings.html" class="dropdown-item has-icon">
                                 <i class="fas fa-cog"></i> Settings

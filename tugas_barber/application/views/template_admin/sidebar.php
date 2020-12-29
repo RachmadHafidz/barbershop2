@@ -71,37 +71,9 @@
             </div>
           </div>
         </form>
-        <ul class="navbar-nav navbar-right">          
-          <li class="dropdown dropdown-list-toggle"><a href="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Notifications                
-              </div>
-              <div class="dropdown-list-content dropdown-list-icons">               
-                  <div class="dropdown-item-icon bg-primary text-white">                    
-                  </div>                  
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-link"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">            
-            <div class="d-sm-none d-lg-inline-block">Hallo <?php echo $this->session->userdata('nama') ?> </div></a>
-            <div class="dropdown-menu dropdown-menu-right">            
-              <a href="features-profile.html" class="dropdown-item has-icon">
-                <i class="far fa-user"></i> Profile
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </div>
+        <ul class="navbar-nav navbar-right">                    
+          <li class="nav-link"><a class="nav-link  nav-link-lg nav-link-user">            
+            <div class="d-sm-none d-lg-inline-block">Hallo <?php echo $this->session->userdata('nama') ?> </div></a>            
           </li>
         </ul>
       </nav>
@@ -122,9 +94,7 @@
                   <li><a class="nav-link" href="#">Ecommerce Dashboard</a></li>
                 </ul>
               </li>              
-              <li>
-              <a class="nav-link" href="<?php echo base_url('admin/data_barbershop') ?>"><i class="fas fa-pencil-ruler"></i> <span>Data Barbershop</span></a>
-              </li>
+              
               <li>
               <a class="nav-link" href="<?php echo base_url('admin/paket_cukur') ?>"><i class="fas fa-cut"></i> <span>Paket Cukur</span></a>
               </li>
@@ -135,10 +105,13 @@
               <a class="nav-link" href="<?php echo base_url('admin/data_transaksi') ?>"><i class="fas fa-database"></i> <span>Data Transaksi</span></a>
               </li>
               <li>
-              <a class="nav-link" href="<?php echo base_url('admin/rekening') ?>"><i class="fas fa-database"></i> <span>Rekening Bank</span></a>
+              <a class="nav-link" href="<?php echo base_url('admin/rekening') ?>"><i class="fas fa-credit-card"></i> <span>Rekening Bank</span></a>
               </li>
               <li>
-              <a class="nav-link" href="<?php echo base_url('admin/laporan') ?>"><i class="fas fa-database"></i> <span>Laporan Transaksi</span></a>
+              <a class="nav-link" href="<?php echo base_url('admin/laporan') ?>"><i class="fas fa-money-check"></i> <span>Laporan Transaksi</span></a>
+              </li>
+              <li>
+              <a class="nav-link" href="<?php echo base_url('admin/hubungi_kami') ?>"><i class="fas fa-envelope-open-text"></i> <span>Pesan Customer</span></a>
               </li>
               <li>
               <a class="nav-link dropdown-item has-icon text-danger"  href="<?php echo base_url('customer2/login/logout') ?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>

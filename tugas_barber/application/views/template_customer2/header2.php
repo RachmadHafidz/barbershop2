@@ -38,14 +38,12 @@
                             <a class="nav-link" href="<?php echo base_url('customer2/login') ?>"><span class="btn btn-sm btn-warning">Login</span></a>    
                             <?php } ?> </div></a>
                             <div class="dropdown-menu dropdown-menu-right">            
-                            <a href="features-profile.html" class="dropdown-item has-icon">
-                                <i class="far fa-user"></i> Profile
-                            </a>
+                            
                             <a href="<?php echo base_url('customer2/fitur') ?>" class="dropdown-item has-icon">
                                 <i class="fas fa-database"></i> Fitur Kami
                             </a>
                             <a href="<?php echo base_url('customer2/transaksi') ?>" class="dropdown-item has-icon">
-                                <i class="fas fa-cog"></i> Transaksi
+                            <i class="fas fa-money-check"></i> Transaksi
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="<?php echo base_url('customer2/login/logout') ?>" class="dropdown-item has-icon text-danger">

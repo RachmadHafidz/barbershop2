@@ -27,9 +27,9 @@
                     <td><?php echo $bk->no_rekening ?></td>                    
                     <td><?php echo $bk->atas_nama ?></td>
                     <td>
-                        <a href="<?php echo base_url('admin/paket_cukur/detail_paket/').$bk->id_bank ?>" class="btn btn-sm btn-success"><i class=" fas fa-eye"></i></a>
-                        <a href="<?php echo base_url('admin/paket_cukur/delete_paket/').$bk->id_bank ?>" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
-                        <a href="<?php echo base_url('admin/paket_cukur/update_paket/').$bk->id_bank ?>" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
+                        
+                        <a href="<?php echo base_url('admin/rekening/delete_rekening/').$bk->id_bank ?>" class="btn btn-sm btn-danger"><i class=" fas fa-trash"></i></a>
+                        <a href="<?php echo base_url('admin/rekening/update_rekening/').$bk->id_bank ?>" class="btn btn-sm btn-primary"><i class=" fas fa-edit"></i></a>
 
                     </td>
                 </tr>
